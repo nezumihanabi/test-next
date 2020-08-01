@@ -23,6 +23,11 @@ const KnowleadgeModel = sequelize.define("knowleadge", {
     allowNull: true,
   },
   file: { field: "file", type: Sequelize.BLOB, allowNull: true },
+  filename: {
+    field: "filename",
+    type: Sequelize.STRING(1000),
+    allowNull: true,
+  },
 });
 
 export async function findAll() {
